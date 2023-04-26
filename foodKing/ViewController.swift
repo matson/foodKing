@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var foodView: UIImageView!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +23,8 @@ class ViewController: UIViewController {
     //Mexican
     //American
     
-
+    @IBAction func foodButton(_ sender: UIButton) {
+    }
+    
 }
 
