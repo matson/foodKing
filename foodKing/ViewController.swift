@@ -13,7 +13,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    //foods to chose from:
+    //Italian
+    //Japanese
+    //Mexican
+    //American
+    
 
 }
 
