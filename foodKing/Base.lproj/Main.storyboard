@@ -16,39 +16,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What You Hungry For?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-Uv-NDN">
-                                <rect key="frame" x="51" y="154" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-W3-sMP">
-                                <rect key="frame" x="75" y="257" width="240" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm in the mood for..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRB-Rh-sfy">
-                                <rect key="frame" x="75" y="467" width="240" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-jS-592">
-                                <rect key="frame" x="121" y="582" width="148" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Food Me">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="foodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUL-IW-zde"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-ES-Qw8">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-po-0yT" userLabel="topView">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What You Hungry For?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-Uv-NDN">
+                                                <rect key="frame" x="51.333333333333343" y="109.66666666666666" width="287.66666666666663" height="30"/>
+                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jzY-Uv-NDN" firstAttribute="centerX" secondItem="YEk-po-0yT" secondAttribute="centerX" id="6fc-O2-lQd"/>
+                                            <constraint firstItem="jzY-Uv-NDN" firstAttribute="centerY" secondItem="YEk-po-0yT" secondAttribute="centerY" id="cdH-Jl-TJj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbu-QI-YLd" userLabel="middleView">
+                                        <rect key="frame" x="0.0" y="257" width="390" height="249"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AqL-W3-sMP">
+                                                <rect key="frame" x="120" y="58.666666666666686" width="150" height="132"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="5uH-YL-gS9"/>
+                                                    <constraint firstAttribute="height" constant="132" id="LxH-Qc-ibq"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UNC-rn-z8A"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm in the mood for..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRB-Rh-sfy">
+                                                <rect key="frame" x="89" y="151" width="212" height="133"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="133" id="TXM-Ng-92c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="AqL-W3-sMP" firstAttribute="centerX" secondItem="Zbu-QI-YLd" secondAttribute="centerX" id="KNr-wE-XET"/>
+                                            <constraint firstItem="WRB-Rh-sfy" firstAttribute="leading" secondItem="Zbu-QI-YLd" secondAttribute="leading" constant="89" id="MYA-Aj-CLY"/>
+                                            <constraint firstItem="WRB-Rh-sfy" firstAttribute="centerX" secondItem="Zbu-QI-YLd" secondAttribute="centerX" id="P9n-UK-8JI"/>
+                                            <constraint firstItem="AqL-W3-sMP" firstAttribute="centerY" secondItem="Zbu-QI-YLd" secondAttribute="centerY" id="vNK-ph-sIf"/>
+                                            <constraint firstAttribute="bottom" secondItem="WRB-Rh-sfy" secondAttribute="bottom" constant="-35" id="x8w-LX-J0u"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhb-qK-IIL" userLabel="bottomView">
+                                        <rect key="frame" x="0.0" y="514" width="390" height="249"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-jS-592">
+                                                <rect key="frame" x="141" y="105.33333333333337" width="108.33333333333331" height="38.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Food Me">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="foodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUL-IW-zde"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7k4-jS-592" firstAttribute="centerY" secondItem="Mhb-qK-IIL" secondAttribute="centerY" id="IzQ-I9-Cx0"/>
+                                            <constraint firstItem="7k4-jS-592" firstAttribute="centerX" secondItem="Mhb-qK-IIL" secondAttribute="centerX" id="jyG-Wl-78b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="dfL-ES-Qw8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5gJ-rA-zSn"/>
+                            <constraint firstItem="dfL-ES-Qw8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fkc-4h-YQg"/>
+                            <constraint firstItem="dfL-ES-Qw8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gJQ-e4-hWi"/>
+                            <constraint firstItem="dfL-ES-Qw8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nyI-dw-AV7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="foodLabel" destination="WRB-Rh-sfy" id="jGK-0t-lLR"/>
